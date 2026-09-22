@@ -1,0 +1,1962 @@
+/* =========================================
+   SIPA — LOGIN
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body.login-page {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: "Inter", sans-serif;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(25, 105, 220, 0.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(19, 75, 155, 0.13),
+            transparent 32%
+        ),
+        #020b1d;
+
+    overflow-x: hidden;
+
+}
+
+
+
+/* =========================================
+   CONTAINER
+   ========================================= */
+
+.login-container {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(390px, 0.82fr)
+        minmax(620px, 1.18fr);
+
+}
+
+
+
+/* =========================================
+   LADO ESQUERDO
+   ========================================= */
+
+.login-intro {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 48px 60px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(3, 22, 50, 0.98),
+            rgba(2, 11, 29, 0.98)
+        );
+
+    border-right: 1px solid
+        rgba(76, 137, 216, 0.12);
+
+    overflow: hidden;
+
+}
+
+
+.login-intro::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(36, 126, 255, 0.08);
+
+    filter: blur(90px);
+
+    top: -190px;
+
+    left: -220px;
+
+    pointer-events: none;
+
+}
+
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.login-logo {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: fit-content;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+}
+
+
+.login-logo-symbol {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #2484ff;
+
+}
+
+
+.login-logo-symbol svg {
+
+    width: 44px;
+
+    height: 44px;
+
+}
+
+
+.login-logo strong {
+
+    display: block;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+}
+
+
+.login-logo span {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: #7185a6;
+
+    font-size: 7px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+
+    letter-spacing: 1.1px;
+
+}
+
+
+
+/* =========================================
+   TEXTO ESQUERDO
+   ========================================= */
+
+.login-intro-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 510px;
+
+}
+
+
+.login-eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #348cff;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+}
+
+
+.login-eyebrow::before {
+
+    content: "";
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #348cff;
+
+    box-shadow:
+        0 0 12px
+        rgba(52, 140, 255, 0.8);
+
+}
+
+
+.login-intro h1 {
+
+    margin: 18px 0;
+
+    font-size: clamp(
+        39px,
+        4vw,
+        58px
+    );
+
+    line-height: 1.02;
+
+    letter-spacing: -2.5px;
+
+    font-weight: 900;
+
+}
+
+
+.login-intro h1 span {
+
+    color: #348cff;
+
+}
+
+
+.login-intro-content > p {
+
+    max-width: 470px;
+
+    margin: 0;
+
+    color: #7d91b1;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =========================================
+   BENEFÍCIOS
+   ========================================= */
+
+.login-benefits {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+
+    margin-top: 38px;
+
+}
+
+
+.login-benefit {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.login-benefit-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: #348cff;
+
+    background:
+        rgba(40, 130, 255, 0.09);
+
+    border: 1px solid
+        rgba(52, 140, 255, 0.15);
+
+}
+
+
+.login-benefit-icon i {
+
+    font-size: 14px;
+
+}
+
+
+.login-benefit strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #dce7f7;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.login-benefit span {
+
+    display: block;
+
+    color: #607693;
+
+    font-size: 9px;
+
+}
+
+
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+
+.login-intro-footer {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #506481;
+
+    font-size: 9px;
+
+}
+
+
+.login-intro-footer i {
+
+    margin-right: 6px;
+
+    color: #348cff;
+
+}
+
+
+
+/* =========================================
+   ÁREA DO FORMULÁRIO
+   ========================================= */
+
+.login-form-area {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 35px 50px;
+
+}
+
+
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 690px;
+
+    padding: 28px 38px 30px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(7, 30, 62, 0.96),
+            rgba(3, 18, 40, 0.97)
+        );
+
+    border: 1px solid
+        rgba(75, 139, 221, 0.16);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.32);
+
+}
+
+
+
+/* =========================================
+   SELETOR LOGIN / CADASTRO
+   ========================================= */
+
+.access-switch {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    padding: 5px;
+
+    margin-bottom: 28px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(1, 10, 24, 0.65);
+
+    border: 1px solid
+        rgba(76, 128, 190, 0.10);
+
+}
+
+
+.access-switch-button {
+
+    min-height: 57px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 8px 12px;
+
+    border: 1px solid transparent;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #617896;
+
+    font-family: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.access-switch-button:hover {
+
+    color: #b9cbe2;
+
+}
+
+
+.access-switch-button.active {
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(36, 126, 255, 0.18),
+            rgba(21, 85, 171, 0.12)
+        );
+
+    border-color:
+        rgba(52, 140, 255, 0.20);
+
+}
+
+
+.access-switch-button > i {
+
+    width: 32px;
+
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    color: #348cff;
+
+    background:
+        rgba(52, 140, 255, 0.09);
+
+    font-size: 12px;
+
+}
+
+
+.access-switch-button span {
+
+    display: block;
+
+}
+
+
+.access-switch-button strong {
+
+    display: block;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+}
+
+
+.access-switch-button small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #536a89;
+
+    font-size: 7px;
+
+}
+
+
+.access-switch-button.active small {
+
+    color: #6e91ba;
+
+}
+
+
+
+/* =========================================
+   PAINÉIS
+   ========================================= */
+
+.access-panel {
+
+    display: none;
+
+}
+
+
+.access-panel.active {
+
+    display: block;
+
+    animation:
+        panelEnter 0.22s ease;
+
+}
+
+
+@keyframes panelEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(6px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================================
+   CABEÇALHO
+   ========================================= */
+
+.form-eyebrow {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #348cff;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+
+}
+
+
+.login-header h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+}
+
+
+.login-header p {
+
+    margin: 7px 0 0;
+
+    color: #6e84a4;
+
+    font-size: 10px;
+
+}
+
+
+
+/* =========================================
+   MENSAGEM
+   ========================================= */
+
+.form-message {
+
+    min-height: 0;
+
+    margin-top: 15px;
+
+    color: #ff7f7f;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+.form-message.visible {
+
+    padding: 10px 12px;
+
+    border-radius: 9px;
+
+    background:
+        rgba(255, 70, 70, 0.07);
+
+    border: 1px solid
+        rgba(255, 70, 70, 0.14);
+
+}
+
+
+
+/* =========================================
+   FORM LOGIN
+   ========================================= */
+
+.login-form {
+
+    margin-top: 23px;
+
+}
+
+
+.form-field {
+
+    margin-bottom: 15px;
+
+}
+
+
+.form-field label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #9cb0cd;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* =========================================
+   INPUT
+   ========================================= */
+
+.input-wrapper {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    height: 44px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(2, 12, 29, 0.72);
+
+    border: 1px solid
+        rgba(83, 127, 179, 0.16);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.input-wrapper:focus-within {
+
+    border-color:
+        rgba(52, 140, 255, 0.55);
+
+    background:
+        rgba(3, 17, 38, 0.92);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(52, 140, 255, 0.06);
+
+}
+
+
+.input-wrapper > i:first-child {
+
+    width: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #416789;
+
+    font-size: 12px;
+
+    pointer-events: none;
+
+}
+
+
+.input-wrapper input,
+.input-wrapper select {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    color: #eaf2ff;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+}
+
+
+.input-wrapper input::placeholder {
+
+    color: #435875;
+
+}
+
+
+
+/* =========================================
+   SENHA
+   ========================================= */
+
+.password-toggle {
+
+    width: 42px;
+
+    height: 100%;
+
+    flex-shrink: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #506b89;
+
+    cursor: pointer;
+
+}
+
+
+.password-toggle:hover {
+
+    color: #348cff;
+
+}
+
+
+
+/* =========================================
+   OPÇÕES LOGIN
+   ========================================= */
+
+.login-options {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: -3px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.login-options button {
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #348cff;
+
+    font-family: inherit;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.login-options button:hover {
+
+    color: #75b1ff;
+
+}
+
+
+
+/* =========================================
+   BOTÃO PRINCIPAL
+   ========================================= */
+
+.primary-button {
+
+    width: 100%;
+
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #257fff,
+            #1764d7
+        );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px
+        rgba(22, 103, 220, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.primary-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.08);
+
+    box-shadow:
+        0 14px 30px
+        rgba(22, 103, 220, 0.30);
+
+}
+
+
+.primary-button:active {
+
+    transform:
+        translateY(0)
+        scale(0.99);
+
+}
+
+
+.primary-button:disabled {
+
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+
+/* =========================================
+   DIVISOR
+   ========================================= */
+
+.form-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 20px 0;
+
+    color: #405774;
+
+    font-size: 8px;
+
+}
+
+
+.form-divider::before,
+.form-divider::after {
+
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        rgba(83, 127, 179, 0.10);
+
+}
+
+
+
+/* =========================================
+   BOTÃO SECUNDÁRIO
+   ========================================= */
+
+.secondary-button {
+
+    width: 100%;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    border: 1px solid
+        rgba(83, 127, 179, 0.16);
+
+    border-radius: 10px;
+
+    background:
+        rgba(3, 15, 34, 0.65);
+
+    color: #9db0ca;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+
+}
+
+
+.secondary-button:hover {
+
+    color: #ffffff;
+
+    border-color:
+        rgba(52, 140, 255, 0.28);
+
+    background:
+        rgba(14, 42, 78, 0.65);
+
+}
+
+
+.secondary-button i {
+
+    color: #ffffff;
+
+}
+
+
+
+/* =========================================
+   TEXTO INFERIOR
+   ========================================= */
+
+.form-bottom-text {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 20px;
+
+    padding-top: 17px;
+
+    border-top: 1px solid
+        rgba(83, 127, 179, 0.09);
+
+    color: #526a88;
+
+    font-size: 9px;
+
+}
+
+
+.form-bottom-text button {
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #348cff;
+
+    font-family: inherit;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+}
+
+
+.form-bottom-text button:hover {
+
+    color: #75b1ff;
+
+}
+
+
+
+/* =========================================
+   CADASTRO
+   ========================================= */
+
+.register-form {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 0 15px;
+
+    margin-top: 18px;
+
+}
+
+
+.full-field {
+
+    grid-column: 1 / -1;
+
+}
+
+
+
+/* =========================================
+   TÍTULOS DAS SEÇÕES
+   ========================================= */
+
+.register-section-title {
+
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 16px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.register-section-title:first-child {
+
+    margin-top: 0;
+
+}
+
+
+.register-section-title > span {
+
+    width: 25px;
+
+    height: 25px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 7px;
+
+    color: #348cff;
+
+    background:
+        rgba(52, 140, 255, 0.09);
+
+    border: 1px solid
+        rgba(52, 140, 255, 0.14);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+}
+
+
+.register-section-title strong {
+
+    display: block;
+
+    color: #dbe7f7;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+.register-section-title small {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: #536a8b;
+
+    font-size: 7px;
+
+}
+
+
+
+/* =========================================
+   SELECT
+   ========================================= */
+
+.select-wrapper {
+
+    position: relative;
+
+}
+
+
+.select-wrapper select {
+
+    appearance: none;
+
+    cursor: pointer;
+
+    padding-right: 30px;
+
+}
+
+
+.select-wrapper select option {
+
+    background: #071d3a;
+
+    color: #ffffff;
+
+}
+
+
+.select-arrow {
+
+    position: absolute;
+
+    right: 12px;
+
+    width: auto !important;
+
+    color: #45617f !important;
+
+    font-size: 8px !important;
+
+    pointer-events: none;
+
+}
+
+
+
+/* =========================================
+   BOTÃO CADASTRO
+   ========================================= */
+
+.register-submit {
+
+    grid-column: 1 / -1;
+
+    margin-top: 5px;
+
+}
+
+
+
+/* =========================================
+   RESPONSIVO
+   ========================================= */
+
+@media (max-width: 1050px) {
+
+    .login-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .login-intro {
+
+        min-height: auto;
+
+        padding: 35px 40px;
+
+        border-right: 0;
+
+        border-bottom: 1px solid
+            rgba(76, 137, 216, 0.12);
+
+    }
+
+
+    .login-intro-content {
+
+        margin-top: 50px;
+
+    }
+
+
+    .login-intro-footer {
+
+        margin-top: 40px;
+
+    }
+
+
+    .login-form-area {
+
+        min-height: auto;
+
+        padding: 40px 30px;
+
+    }
+
+}
+
+
+
+@media (max-width: 650px) {
+
+    .login-intro {
+
+        padding: 28px 22px;
+
+    }
+
+
+    .login-intro h1 {
+
+        font-size: 38px;
+
+        letter-spacing: -1.7px;
+
+    }
+
+
+    .login-form-area {
+
+        padding: 25px 15px 40px;
+
+    }
+
+
+    .login-card {
+
+        padding: 22px 20px 25px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .access-switch-button {
+
+        min-height: 53px;
+
+        padding: 7px 8px;
+
+    }
+
+
+    .access-switch-button > i {
+
+        width: 29px;
+
+        height: 29px;
+
+    }
+
+
+    .access-switch-button strong {
+
+        font-size: 8px;
+
+    }
+
+
+    .access-switch-button small {
+
+        font-size: 6px;
+
+    }
+
+
+    .register-form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .form-field,
+    .full-field,
+    .register-submit {
+
+        grid-column: 1 / -1;
+
+    }
+
+}
+
+
+
+@media (max-width: 420px) {
+
+    .login-header h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    .login-intro h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .access-switch-button span {
+
+        min-width: 0;
+
+    }
+
+
+    .access-switch-button strong {
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+    }
+
+}
+
+/* =========================================================
+   SIPA — PADRÃO VISUAL ATUAL
+   LOGIN / CADASTRO
+   ========================================================= */
+
+
+/* =========================================================
+   FUNDO GERAL
+   ========================================================= */
+
+body.login-page {
+    background: #eaf4fc !important;
+    color: #16324f !important;
+}
+
+
+/* =========================================================
+   LADO ESQUERDO
+   ========================================================= */
+
+.login-intro {
+    background: #123f68 !important;
+    border-right: 1px solid rgba(255,255,255,.10) !important;
+}
+
+
+/* brilho decorativo */
+.login-intro::before {
+    background: rgba(35,136,217,.10) !important;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.login-logo {
+    color: #ffffff !important;
+}
+
+.login-logo-symbol {
+    color: #ffffff !important;
+}
+
+.login-logo strong {
+    color: #ffffff !important;
+}
+
+.login-logo span {
+    color: rgba(255,255,255,.72) !important;
+}
+
+
+/* =========================================================
+   TEXTO DO LADO ESQUERDO
+   ========================================================= */
+
+.login-eyebrow {
+    color: #8dc8f5 !important;
+}
+
+.login-eyebrow::before {
+    background: #2388d9 !important;
+    box-shadow: 0 0 12px rgba(35,136,217,.65) !important;
+}
+
+.login-intro h1 {
+    color: #ffffff !important;
+}
+
+.login-intro h1 span {
+    color: #4ba5e8 !important;
+}
+
+.login-intro-content > p {
+    color: rgba(255,255,255,.68) !important;
+}
+
+
+/* =========================================================
+   BENEFÍCIOS
+   ========================================================= */
+
+.login-benefit-icon {
+    color: #8dc8f5 !important;
+    background: rgba(255,255,255,.07) !important;
+    border: 1px solid rgba(255,255,255,.10) !important;
+}
+
+.login-benefit strong {
+    color: #ffffff !important;
+}
+
+.login-benefit span {
+    color: rgba(255,255,255,.55) !important;
+}
+
+
+/* =========================================================
+   RODAPÉ ESQUERDO
+   ========================================================= */
+
+.login-intro-footer {
+    color: rgba(255,255,255,.40) !important;
+}
+
+.login-intro-footer i {
+    color: #2388d9 !important;
+}
+
+
+/* =========================================================
+   ÁREA DO FORMULÁRIO
+   ========================================================= */
+
+.login-form-area {
+    background: #eaf4fc !important;
+}
+
+
+/* =========================================================
+   CARD DO LOGIN
+   ========================================================= */
+
+.login-card {
+    background: #f8fbfe !important;
+    border: 1px solid #cbddec !important;
+
+    box-shadow:
+        0 15px 40px rgba(18,59,99,.10) !important;
+}
+
+
+/* =========================================================
+   SELETOR LOGIN / CADASTRO
+   ========================================================= */
+
+.access-switch {
+    background: #edf5fc !important;
+    border: 1px solid #d5e3ef !important;
+}
+
+.access-switch-button {
+    color: #607b99 !important;
+}
+
+.access-switch-button:hover {
+    color: #16324f !important;
+}
+
+.access-switch-button.active {
+    color: #ffffff !important;
+    background: #1d72ae !important;
+    border-color: #2388d9 !important;
+}
+
+.access-switch-button > i {
+    color: #1676c5 !important;
+    background: #dcecf9 !important;
+}
+
+.access-switch-button.active > i {
+    color: #ffffff !important;
+    background: rgba(255,255,255,.12) !important;
+}
+
+.access-switch-button strong {
+    color: inherit !important;
+}
+
+.access-switch-button small {
+    color: #7890aa !important;
+}
+
+.access-switch-button.active small {
+    color: rgba(255,255,255,.70) !important;
+}
+
+
+/* =========================================================
+   CABEÇALHO DO FORMULÁRIO
+   ========================================================= */
+
+.form-eyebrow {
+    color: #1676c5 !important;
+}
+
+.login-header h2 {
+    color: #16324f !important;
+}
+
+.login-header p {
+    color: #607b99 !important;
+}
+
+
+/* =========================================================
+   MENSAGENS
+   ========================================================= */
+
+.form-message {
+    color: #d95353 !important;
+}
+
+.form-message.visible {
+    background: rgba(217,83,83,.06) !important;
+    border: 1px solid rgba(217,83,83,.15) !important;
+}
+
+
+/* =========================================================
+   CAMPOS
+   ========================================================= */
+
+.form-field label {
+    color: #456582 !important;
+}
+
+.input-wrapper {
+    background: #edf5fc !important;
+    border: 1px solid #cbddec !important;
+}
+
+.input-wrapper:focus-within {
+    background: #f8fbfe !important;
+    border-color: #2388d9 !important;
+
+    box-shadow:
+        0 0 0 3px rgba(35,136,217,.08) !important;
+}
+
+.input-wrapper > i:first-child {
+    color: #5d87aa !important;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+    color: #16324f !important;
+}
+
+.input-wrapper input::placeholder {
+    color: #8aa0b7 !important;
+}
+
+
+/* =========================================================
+   SENHA
+   ========================================================= */
+
+.password-toggle {
+    color: #6d8aa5 !important;
+}
+
+.password-toggle:hover {
+    color: #1676c5 !important;
+}
+
+
+/* =========================================================
+   OPÇÕES
+   ========================================================= */
+
+.login-options button {
+    color: #1676c5 !important;
+}
+
+.login-options button:hover {
+    color: #1d72ae !important;
+}
+
+
+/* =========================================================
+   BOTÃO PRINCIPAL
+   ========================================================= */
+
+.primary-button {
+    background: #1676c5 !important;
+    color: #ffffff !important;
+
+    box-shadow:
+        0 10px 25px rgba(22,118,197,.20) !important;
+}
+
+.primary-button:hover {
+    background: #1d72ae !important;
+}
+
+
+/* =========================================================
+   DIVISOR
+   ========================================================= */
+
+.form-divider {
+    color: #8298ad !important;
+}
+
+.form-divider::before,
+.form-divider::after {
+    background: #d5e3ef !important;
+}
+
+
+/* =========================================================
+   BOTÃO SECUNDÁRIO
+   ========================================================= */
+
+.secondary-button {
+    background: #edf5fc !important;
+    border: 1px solid #cbddec !important;
+    color: #456582 !important;
+}
+
+.secondary-button:hover {
+    background: #e2eff9 !important;
+    border-color: #2388d9 !important;
+    color: #16324f !important;
+}
+
+.secondary-button i {
+    color: #1676c5 !important;
+}
+
+
+/* =========================================================
+   TEXTO INFERIOR
+   ========================================================= */
+
+.form-bottom-text {
+    border-top: 1px solid #d5e3ef !important;
+    color: #7890aa !important;
+}
+
+.form-bottom-text button {
+    color: #1676c5 !important;
+}
+
+.form-bottom-text button:hover {
+    color: #1d72ae !important;
+}
+
+
+/* =========================================================
+   CADASTRO
+   ========================================================= */
+
+.register-section-title > span {
+    color: #1676c5 !important;
+    background: #e2eff9 !important;
+    border: 1px solid #cbddec !important;
+}
+
+.register-section-title strong {
+    color: #16324f !important;
+}
+
+.register-section-title small {
+    color: #7890aa !important;
+}
+
+
+/* SELECT */
+.select-wrapper select option {
+    background: #f8fbfe !important;
+    color: #16324f !important;
+}
+
+.select-arrow {
+    color: #60809f !important;
+}
+
+
+/* =========================================================
+   BOTÃO DE CADASTRO
+   ========================================================= */
+
+.register-submit .primary-button {
+    background: #1676c5 !important;
+}
+
+.register-submit .primary-button:hover {
+    background: #1d72ae !important;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .login-intro {
+        background: #123f68 !important;
+    }
+
+    .login-form-area {
+        background: #eaf4fc !important;
+    }
+
+}
+
+/* =========================================
+   ERROS DE VALIDAÇÃO DO CADASTRO
+   ========================================= */
+
+.cadastro-field-error {
+    border: 1px solid #dc3545 !important;
+    background-color: #fff5f5 !important;
+}
+
+.cadastro-error-message {
+    display: block;
+    margin-top: 3px;
+    color: #dc3545 !important;
+    font-size: 10px !important;
+    font-weight: 500;
+    line-height: 1.2;
+}

@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SIPA | Acesso</title>
+
+
+    <!-- =========================================
+         CSS
+         ========================================= -->
+
+    <link
+        rel="stylesheet"
+        href="css/login.css"
+    >
+
+
+    <!-- =========================================
+         FONTE
+         ========================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================
+         FONT AWESOME
+         ========================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body class="login-page">
+
+
+<div class="login-container">
+
+
+    <!-- =========================================
+         LADO ESQUERDO
+         ========================================= -->
+
+    <section class="login-intro">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="login-logo"
+        >
+
+            <div class="login-logo-symbol">
+
+                <svg
+                    viewBox="0 0 70 70"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+
+                    <path
+                        d="M52 12H29C17 12 9 20 9 31C9 40 14 46 23 48L42 52C46 53 48 55 48 58C48 61 46 63 41 63H18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                    <path
+                        d="M18 58H41C53 58 61 50 61 39C61 30 56 24 47 22L28 18C24 17 22 15 22 12"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+
+                </svg>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    SIPA
+                </strong>
+
+                <span>
+                    SISTEMA INTELIGENTE
+                    <br>
+                    PARA AGENDAMENTOS
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- TEXTO -->
+
+        <div class="login-intro-content">
+
+
+            <span class="login-eyebrow">
+                SISTEMA INTELIGENTE
+            </span>
+
+
+            <h1>
+                Sua jornada começa
+                <span>aqui.</span>
+            </h1>
+
+
+            <p>
+                Tenha controle das suas aulas,
+                acompanhe sua evolução e organize
+                sua formação de forma simples e rápida.
+            </p>
+
+
+
+            <!-- BENEFÍCIOS -->
+
+            <div class="login-benefits">
+
+
+                <div class="login-benefit">
+
+                    <div class="login-benefit-icon">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Agendamento fácil
+                        </strong>
+
+                        <span>
+                            Escolha data e horário
+                            disponíveis.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-benefit">
+
+                    <div class="login-benefit-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Acompanhe seu progresso
+                        </strong>
+
+                        <span>
+                            Veja sua evolução em tempo real.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="login-benefit">
+
+                    <div class="login-benefit-icon">
+
+                        <i class="fa-solid fa-car"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Tudo em um só lugar
+                        </strong>
+
+                        <span>
+                            Suas aulas e informações
+                            sempre organizadas.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- RODAPÉ -->
+
+        <div class="login-intro-footer">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            Seus dados são protegidos com segurança.
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         LADO DIREITO
+         ========================================= -->
+
+    <section class="login-form-area">
+
+
+        <div class="login-card">
+
+
+            <!-- =====================================
+                 SELETOR LOGIN / CADASTRO
+                 ===================================== -->
+
+            <div class="access-switch">
+
+
+                <button
+                    type="button"
+                    id="login-mode-button"
+                    class="access-switch-button active"
+                >
+
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
+                    <span>
+
+                        <strong>
+                            Já sou aluno
+                        </strong>
+
+                        <small>
+                            Fazer login
+                        </small>
+
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    id="register-mode-button"
+                    class="access-switch-button"
+                >
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    <span>
+
+                        <strong>
+                            Quero me cadastrar
+                        </strong>
+
+                        <small>
+                            Criar minha conta
+                        </small>
+
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =====================================
+                 ÁREA DE LOGIN
+                 ===================================== -->
+
+            <div
+                id="login-panel"
+                class="access-panel active"
+            >
+
+
+                <div class="login-header">
+
+                    <span class="form-eyebrow">
+                        BEM-VINDO DE VOLTA
+                    </span>
+
+
+                    <h2>
+                        Acesse sua conta
+                    </h2>
+
+
+                    <p>
+                        Informe seus dados para continuar.
+                    </p>
+
+                </div>
+
+
+
+                <!-- MENSAGEM -->
+
+                <div
+                    id="login-message"
+                    class="form-message"
+                ></div>
+
+
+
+                <!-- FORM LOGIN -->
+
+                <form
+                    id="login-form"
+                    class="login-form"
+                >
+
+
+                    <!-- CPF -->
+
+                    <div class="form-field">
+
+                        <label for="login-cpf">
+                            CPF
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-id-card"></i>
+
+                            <input
+                                type="text"
+                                id="login-cpf"
+                                placeholder="000.000.000-00"
+                                maxlength="14"
+                                autocomplete="username"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SENHA -->
+
+                    <div class="form-field">
+
+                        <label for="login-password">
+                            Senha
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="login-password"
+                                placeholder="Digite sua senha"
+                                autocomplete="current-password"
+                            >
+
+
+                            <button
+                                type="button"
+                                id="password-toggle"
+                                class="password-toggle"
+                                aria-label="Mostrar senha"
+                            >
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ESQUECI SENHA -->
+
+                    <div class="login-options">
+
+                        <span></span>
+
+                        <button
+                            type="button"
+                            id="forgot-password"
+                        >
+                            Esqueci minha senha
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- ENTRAR -->
+
+                    <button
+                        type="submit"
+                        id="login-submit"
+                        class="primary-button"
+                    >
+
+                        <span>
+                            Entrar
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- DIVISOR -->
+
+                <div class="form-divider">
+
+                    <span>
+                        ou
+                    </span>
+
+                </div>
+
+
+
+                <!-- GOOGLE -->
+
+                <button
+                    type="button"
+                    id="google-login"
+                    class="secondary-button"
+                >
+
+                    <i class="fa-brands fa-google"></i>
+
+                    Entrar com Google
+
+                </button>
+
+
+
+                <!-- RODAPÉ -->
+
+                <div class="form-bottom-text">
+
+                    Ainda não possui uma conta?
+
+                    <button
+                        type="button"
+                        id="bottom-register-button"
+                    >
+                        Quero me cadastrar
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =====================================
+                 ÁREA DE CADASTRO
+                 ===================================== -->
+
+            <div
+                id="register-panel"
+                class="access-panel"
+            >
+
+
+                <div class="login-header">
+
+                    <span class="form-eyebrow">
+                        NOVO ALUNO
+                    </span>
+
+
+                    <h2>
+                        Crie sua conta
+                    </h2>
+
+
+                    <p>
+                        Preencha seus dados para começar.
+                    </p>
+
+                </div>
+
+
+
+                <!-- MENSAGEM -->
+
+                <div
+                    id="cadastro-message"
+                    class="form-message"
+                ></div>
+
+
+
+                <!-- FORM CADASTRO -->
+
+                <form
+                    id="cadastroForm"
+                    class="register-form"
+                >
+
+
+                    <!-- =================================
+                         DADOS PESSOAIS
+                         ================================= -->
+
+                    <div class="register-section-title">
+
+                        <span>
+                            01
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Dados pessoais
+                            </strong>
+
+                            <small>
+                                Informe seus dados básicos.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- NOME -->
+
+                    <div class="form-field full-field">
+
+                        <label for="nome">
+                            Nome completo
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="nome"
+                                placeholder="Digite seu nome completo"
+                                autocomplete="name"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CPF -->
+
+                    <div class="form-field">
+
+                        <label for="cpf">
+                            CPF
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-id-card"></i>
+
+                            <input
+                                type="text"
+                                id="cpf"
+                                placeholder="000.000.000-00"
+                                maxlength="14"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TELEFONE -->
+
+                    <div class="form-field">
+
+                        <label for="telefone">
+                            Telefone
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="telefone"
+                                placeholder="(27) 99999-9999"
+                                maxlength="15"
+                                autocomplete="tel"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-field full-field">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Digite seu e-mail"
+                                autocomplete="email"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         FORMAÇÃO
+                         ================================= -->
+
+                    <div class="register-section-title">
+
+                        <span>
+                            02
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Sua formação
+                            </strong>
+
+                            <small>
+                                Escolha categoria e pacote.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CATEGORIA -->
+
+                    <div class="form-field">
+
+                        <label for="categoria">
+                            Categoria
+                        </label>
+
+
+                        <div class="input-wrapper select-wrapper">
+
+                            <i class="fa-solid fa-car"></i>
+
+
+                            <select id="categoria">
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                                <option value="B">
+                                    B — Carro
+                                </option>
+
+                                <option value="A">
+                                    A — Moto
+                                </option>
+
+                                <option value="AB">
+                                    AB — Carro + Moto
+                                </option>
+
+                            </select>
+
+
+                            <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PACOTE -->
+
+                    <div class="form-field">
+
+                        <label for="pacote">
+                            Pacote
+                        </label>
+
+
+                        <div class="input-wrapper select-wrapper">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+
+                            <select id="pacote">
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                                <option value="2">
+                                    2 aulas
+                                </option>
+
+                                <option value="5">
+                                    5 aulas
+                                </option>
+
+                                <option value="10">
+                                    10 aulas
+                                </option>
+
+                                <option value="15">
+                                    15 aulas
+                                </option>
+
+                                <option value="20">
+                                    20 aulas
+                                </option>
+
+                            </select>
+
+
+                            <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         SEGURANÇA
+                         ================================= -->
+
+                    <div class="register-section-title">
+
+                        <span>
+                            03
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Segurança
+                            </strong>
+
+                            <small>
+                                Crie uma senha para acessar.
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SENHA -->
+
+                    <div class="form-field">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="senha"
+                                placeholder="Crie uma senha"
+                                autocomplete="new-password"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CONFIRMAR SENHA -->
+
+                    <div class="form-field">
+
+                        <label for="confirmarSenha">
+                            Confirmar senha
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirmarSenha"
+                                placeholder="Repita sua senha"
+                                autocomplete="new-password"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- BOTÃO CADASTRAR -->
+
+                    <button
+                        type="submit"
+                        class="primary-button register-submit"
+                    >
+
+                        <span>
+                            Criar minha conta
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- VOLTAR LOGIN -->
+
+                <div class="form-bottom-text">
+
+                    Já possui uma conta?
+
+                    <button
+                        type="button"
+                        id="bottom-login-button"
+                    >
+                        Fazer login
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+     ========================================= -->
+
+<script src="js/dados.js"></script>
+<script src="js/login.js"></script>
+
+
+</body>
+
+</html>
