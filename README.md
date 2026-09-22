@@ -4,6 +4,10 @@ O **SIPA (Sistema Inteligente para Agendamentos)** é uma aplicação web desenv
 
 O sistema foi desenvolvido com foco em organização, praticidade e controle dos agendamentos de alunos, instrutores, veículos e categorias de habilitação.
 
+## Acesse o sistema
+
+[**Acessar o SIPA**](https://teteusalvescorrea-hub.github.io/SIPA/)
+
 ## Funcionalidades
 
 - Cadastro e gerenciamento de alunos
@@ -24,7 +28,7 @@ O sistema foi desenvolvido com foco em organização, praticidade e controle dos
 - Página de progresso do aluno
 - Armazenamento dos agendamentos no sistema
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - HTML5
 - CSS3
@@ -33,17 +37,14 @@ O sistema foi desenvolvido com foco em organização, praticidade e controle dos
 - SessionStorage
 - Font Awesome
 
-## 📁 Estrutura do projeto
+## Estrutura do projeto
 
 ```text
 SIPA/
 │
 ├── assets/
-│
 ├── css/
-│
 ├── js/
-│
 ├── agendamento.html
 ├── cadastro.html
 ├── dashboard.html
